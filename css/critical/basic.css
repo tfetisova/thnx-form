@@ -1,0 +1,78 @@
+/*basic*/
+@font-face{
+    font-family: 'BodoniC';
+    src: url('../../fonts/BodoniC.otf') format('otf'),
+         url('../../fonts/BodoniC.ttf') format('truetype'),
+         url('../../fonts/BodoniC.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Lato';
+    src: url('../../fonts/Lato-Regular.ttf') format('truetype'),
+       url('../../fonts/Lato-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Lato';
+    src: url('../../fonts/Lato-Heavy.ttf') format('truetype'),
+    url('../../fonts/Lato-Heavy.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+:root{
+    --primary-color: #ff6700;
+    --primary-bg:  linear-gradient(to right, #ff8201, #ffa933);
+    --text-color: #50504f;
+    --subtitle-color: #b3b3b3;
+    --border-color: #e7e7e7;
+}
+.main-container {
+    padding-top: 85px;
+    padding-bottom: 15vh;
+    background-image: url("../../img/main-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    font-family: Lato, sans-serif;
+    color: var(--text-color);
+}
+.step-title{
+    font-size: 1.75rem;
+    line-height: 1.286;
+    color: var(--primary-color);
+}
+.step-subtitle{
+    width: 80%;
+    color: var(--subtitle-color);
+}
+.step-title-container{
+    min-height: 15vh;
+}
+.step{
+    width: 30px;
+    height: 30px;
+    color: var(--subtitle-color);
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+.steps-container{
+    flex-shrink: 0;
+}
+.line-after-step:after{
+    content: '';
+    width: 30px;
+    margin-right: 6px;
+    height: 1px;
+    background-color: var(--subtitle-color);
+    display: inline-block;
+}
+.step-container.active > .step{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+

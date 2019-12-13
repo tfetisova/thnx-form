@@ -1,0 +1,13 @@
+@media screen and (min-width: 480px) {
+    .main-container {
+        background-image: url("../../img/main-bg-desktop.png");
+        /*height: auto;*/
+    }
+    .bottom-btn-container{
+        padding-bottom: 10vh;
+        padding-top: 10vh;
+    }
+    #eventreg{
+        padding-bottom: 40vh;
+    }
+}
