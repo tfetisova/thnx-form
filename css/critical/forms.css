@@ -298,10 +298,6 @@ a.btn-form-submit:not([href]):not([tabindex]){
     border: 1px solid var(--text-color);
     border-radius: 50%;
 }
-.radio{
-    /*position: relative;*/
-}
-/*TEMP*/
 /* Radio Buttons
    ========================================================================== */
 [type="radio"]:not(:checked),
@@ -511,4 +507,14 @@ a.btn-form-submit:not([href]):not([tabindex]){
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top center;
+}
+.thanks-all-preview{
+    overflow-y: scroll;
+    height: 40vh;
+}
+.preview-title{
+    font-family: 'BodoniC', serif;
+    font-size: 1.875rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
 }
