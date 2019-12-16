@@ -1,5 +1,6 @@
 //visual steps display
 $(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
   $('#thanks-slider').owlCarousel({
     center: true,
     items: 1,
@@ -37,12 +38,23 @@ $(document).ready(function(){
     }
     $('.steps').html(allSteps.join(''))
   };
+
   createSteps(steps);
   const visibleStep = $(".step-tab:visible").data('step');
   $(`.step-container[data-step=${visibleStep}]`).addClass('active');
-
-  $('.continue').on('click', ()=>{
-
+  const preview = () => {
+    $('.step-title').text('Ваша благодарность!').css({
+      'color':'var(--text-color)',
+    });
+    $('.step-subtitle').text('Смотрите, что получилось.').show().css({
+      'color':'var(--text-color)',
+    });
+    $('.steps').removeClass('d-flex').addClass('d-none');
+    $('.step-title-container').addClass('preview');
+    $('.continue').addClass('d-none');
+    $('.btn-form-submit').removeClass('d-none')
+  };
+  const stepContinue = () => {
     $('.step-subtitle').hide();
     const visibleStep = $('.step-tab:visible').data('step');
     if($('.step-tab:visible').next()){
@@ -66,19 +78,21 @@ $(document).ready(function(){
           break;
         case 5 :
           //preview case
-          $('.step-title').text('Ваша благодарность!').css({
-            'color':'var(--text-color)',
-          });
-          $('.step-subtitle').text('Смотрите, что получилось.').show().css({
-            'color':'var(--text-color)',
-          });
-          $('.steps').removeClass('d-flex').addClass('d-none');
-          $('.step-title-container').addClass('preview')
+         preview();
           break;
         default:
           $('.step-title').text('Начнём благодарность?');
       }
     }
+    $('body,html').animate({scrollTop: 0}, 400);
+  }
+  const goToPreview = () => {
+    $('.step-preview').addClass('active')
+      .siblings('.step-tab').removeClass('active');
+    preview();
+  };
+  $('.continue').on('click', ()=>{
+  stepContinue();
   });
   //живой поиск, логика перенесена из html
   isolimit = 9, isoColWd = 148;
@@ -255,7 +269,6 @@ $(document).ready(function(){
   });
   //user photo upload
   $('.user-photo-input').change(function() {
-    console.log(this.files[0]);
     if (this.files[0]) {
       let fr = new FileReader();
       fr.onload = function () {
@@ -275,11 +288,12 @@ $(document).ready(function(){
 
   });
 
-
   //редактирование текста благодарности
-  $('.thanks-text-edit').on('click', ()=>{
-    const editId = $(".thanks-text-edit").data("edit");
+  $('.thanks-text-edit').on('click', function(){
+    const editId = $(this).data("edit");
+    console.log('editId',editId);
     const editText = $(`.thanks-text[data-edit="${editId}"]`);
+    console.log('editText',editText);
     const thanksTextInput = $('#thanks-text-input');
     const modalTitle = $('#editing-modal');
     const squareCount = 10;
@@ -293,13 +307,14 @@ $(document).ready(function(){
       return squares.join('');
     });
 //редактирвоание текста
-    thanksTextInput.text(editText.text());
+    thanksTextInput.val(editText.text().trim());
+  });
 
-
+  //сохранение текста благодарности
+  $('#save-thanks-text').on('click', function(){
+    goToPreview();
+    $('.preview-thanks-text').text($('#thanks-text-input').val());
   })
-
-
-
 
 
 });

@@ -249,7 +249,12 @@
 							 data-auto-loop="false">
                             <div class="thanks-text-slide">
                                 <p class="thanks-text" data-edit='thanks-text-1'>
-                                    Доктор Юрий Трунов, Вы лучший из лучших врачей <span class="marked-thanks-text" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">на свете</span>! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто <span class="marked-thanks-text" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">превосходный</span>.
+                                    Доктор Юрий Трунов, Вы лучший из лучших врачей
+									<span class="marked-thanks-text"
+											data-toggle="popover"
+											data-trigger="focus"
+											data-content="And here's some amazing content. It's very engaging. Right?"
+											data-placement="bottom">на свете</span>! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто <span class="marked-thanks-text" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. Right?" data-placement="bottom">превосходный</span>.
                                 </p>
                                 <div class="thanks-text-edit" data-edit='thanks-text-1'  data-toggle="modal" data-target="#editingModal">
                                     <div class="thanks-edit-container d-flex">
@@ -368,7 +373,7 @@
 						<div class="col-10 offset-1">
 						<div class="thanks-all-preview">
 							<h2 class="preview-title">Благодарность<br>Юрию Трунову</h2>
-							<p class="preview-thanks-text" data-edit="preview">Доктор Юрий Трунов, Вы лучший из лучших врачей на свете! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто превосходный.</p>
+							<p class="preview-thanks-text thanks-text" data-edit="preview">Доктор Юрий Трунов, Вы лучший из лучших врачей на свете! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто превосходный.</p>
 
 
 
@@ -395,7 +400,6 @@
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-<!--									не поняла что за странные квадратики и как их делать адаптивными-->
 									<div class="modal-title d-flex" id="editing-modal"></div>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
@@ -406,7 +410,7 @@
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary btn-close-modal" data-dismiss="modal">Закрыть</button>
-									<button type="button" class="btn bottom-btn">Сохранить и продолжить</button>
+									<button type="button" class="btn bottom-btn" id="save-thanks-text" data-dismiss="modal">Сохранить и продолжить</button>
 								</div>
 							</div>
 						</div>
@@ -416,7 +420,7 @@
 					<div class="row pt-2 ">
 						<div class="col-8 offset-2">
 							<button type="button" class="w-100 continue bottom-btn py-3">Продолжить</button>
-							<a class="w-100 btn btn-block py-3 btn-form-submit bottom-btn" id="md-eventreg">Отправить</a>
+							<button type="submit" class="w-100 btn btn-block py-3 btn-form-submit bottom-btn d-none" id="md-eventreg">Отправить</button>
 						</div>
 					</div>
 				</div>

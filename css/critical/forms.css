@@ -103,10 +103,6 @@ input[type=tel]:not(.browser-default):focus:not([readonly])+label
     z-index: 200;
 }
 
-
-.btn-form-submit{
-    display: none;
-}
 .btn:not(:disabled):not(.disabled).btn-form-submit.active{
     display: block !important;
 }
@@ -433,6 +429,7 @@ a.btn-form-submit:not([href]):not([tabindex]){
     text-decoration: underline;
     text-decoration-color: var(--primary-color);
     text-decoration-style: dotted;
+    cursor: pointer;
     /*text-decoration-color: var;*/
 
 }
@@ -449,8 +446,8 @@ a.btn-form-submit:not([href]):not([tabindex]){
 #thanks-slider > div.owl-nav > button.owl-prev{
     position: absolute;
     left: -20px;
-    top: 40%;
-    height: 20%;
+    top: 10%;
+    height: 80%;
 }
 #thanks-slider > div.owl-nav > button.disabled > .thanks-slide-arrow{
     border-top: 1px solid #c5c5c5;
@@ -513,7 +510,7 @@ a.btn-form-submit:not([href]):not([tabindex]){
 .thanks-all-preview{
     overflow-y: scroll;
     margin-top: 40vh;
-    height: 40vh;
+    max-height: 40vh;
 }
 .preview-title{
     font-family: 'BodoniC', serif;
