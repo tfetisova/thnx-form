@@ -275,6 +275,24 @@ $(document).ready(function(){
 
   });
 
+  //заполнение серыми квадратами первой строки модального окна редактирования
+  //редактирование текста благодарности
+  $('.thanks-text-edit').on('click', ()=>{
+    const editText = $('.thanks-text-edit').data('edit');
+    const modalTitle = $('#editing-modal');
+    const squareCount = 10;
+    const square = `<div class="grey-square"></div>`
+    modalTitle.html(()=>{
+      let squares = [];
+      for(let i=0; i<squareCount; i++){
+        squares.push(square)
+      }
+      return squares.join('');
+    });
+
+
+
+  })
 
 
 
