@@ -275,13 +275,16 @@ $(document).ready(function(){
 
   });
 
-  //заполнение серыми квадратами первой строки модального окна редактирования
+
   //редактирование текста благодарности
   $('.thanks-text-edit').on('click', ()=>{
-    const editText = $('.thanks-text-edit').data('edit');
+    const editId = $(".thanks-text-edit").data("edit");
+    const editText = $(`.thanks-text[data-edit="${editId}"]`);
+    const thanksTextInput = $('#thanks-text-input');
     const modalTitle = $('#editing-modal');
     const squareCount = 10;
-    const square = `<div class="grey-square"></div>`
+    const square = `<div class="grey-square"></div>`;
+    //заполнение серыми квадратами первой строки модального окна редактирования
     modalTitle.html(()=>{
       let squares = [];
       for(let i=0; i<squareCount; i++){
@@ -289,7 +292,8 @@ $(document).ready(function(){
       }
       return squares.join('');
     });
-
+//редактирвоание текста
+    thanksTextInput.text(editText.text());
 
 
   })

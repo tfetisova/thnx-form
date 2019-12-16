@@ -5,9 +5,12 @@
     }
     .bottom-btn-container{
         padding-bottom: 10vh;
-        padding-top: 10vh;
     }
     #eventreg{
         padding-bottom: 40vh;
+    }
+    .user-photo{
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }

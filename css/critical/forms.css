@@ -545,6 +545,11 @@ a.btn-form-submit:not([href]):not([tabindex]){
     height: 80%;
     overflow-y: scroll;
 }
+#thanks-text-input{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 .btn-close-modal{
     border-radius: 23px;
     color: #FFF;
