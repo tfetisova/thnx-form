@@ -9,6 +9,13 @@
 }
 @font-face{
     font-family: 'Lato';
+    src: url('../../fonts/Lato-Light.ttf') format('truetype'),
+    url('../../fonts/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Lato';
     src: url('../../fonts/Lato-Regular.ttf') format('truetype'),
        url('../../fonts/Lato-Regular.woff') format('woff');
     font-weight: 400;
@@ -30,12 +37,10 @@
 }
 .main-container {
     padding-top: 85px;
-    padding-bottom: 15vh;
     background-image: url("../../img/main-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
-    height: 100vh;
     font-family: Lato, sans-serif;
     color: var(--text-color);
 }
@@ -44,6 +49,9 @@
     line-height: 1.286;
     color: var(--primary-color);
 }
+.step-title.grey{
+    color: var(--text-color);
+}
 .step-subtitle{
     width: 80%;
     color: var(--subtitle-color);
@@ -51,13 +59,7 @@
 .step-title-container{
     min-height: 15vh;
 }
-.step{
-    width: 30px;
-    height: 30px;
-    color: var(--subtitle-color);
-    margin-right: 6px;
-    flex-shrink: 0;
-}
+
 .steps-container{
     flex-shrink: 0;
 }
@@ -69,10 +71,50 @@
     background-color: var(--subtitle-color);
     display: inline-block;
 }
-.step-container.active > .step{
+/*состояния шагов*/
+/*еще не пройденный шаг*/
+.step{
+    width: 30px;
+    height: 30px;
+    color: var(--subtitle-color);
+    margin-right: 6px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+/*выбранный шаг*/
+.step.active{
     background-color: var(--primary-color);
     color: #fff;
 }
+/*пройденный шаг*/
+.step.visited{
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
 
+/*состояния кнопок*/
+/*общие стили*/
+.bottom-btn,
+.bottom-btn:link,
+.bottom-btn:visited,
+.bottom-btn:hover,
+.bottom-btn:active{
+    width: 180px;
+    border-radius: 23px;
+    border: none;
+    line-height: 0.938;
+    font-weight: 300;
+    text-decoration: none;
+}
 
+/*активная кнопка*/
+.bottom-btn.active{
+    background: var(--primary-bg);
+    color: #FFF;
+}
+/*неактивная кнопка*/
+.bottom-btn.disabled{
+    background: var(--primary-bg);
+}
 

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Site description" >
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <title>Step 5</title>
+
+    <!-- Critical CSS -->
+    <style type="text/css">
+        @import "css/critical/bootstrap-reboot.css";
+        @import "css/critical/bootstrap-grid.css";
+        @import "css/critical/bootstrap.css";
+        @import "css/critical/basic.css";
+        @import "css/critical/forms.css";
+        @import "css/critical/fr-theme.css";
+        @import "css/critical/media.css";
+
+    </style>
+    <!-- /Critical CSS -->
+
+</head>
+
+<body>
+<div class="main-container" id="page">
+    <div class="container d-flex flex-column justify-content-start step-title-container">
+        <h2 class="text-center step-title mb-0 grey">Текст благодарности</h2>
+        <p class="text-center mx-auto step-subtitle mb-2">Выберите из предложенных вариантов и отредактируйте по своему желанию</p>
+        <div class="steps d-flex justify-content-center">
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center"
+                    data-step="1">
+                <a class="step rounded-circle d-flex justify-content-center align-items-center visited" href="index.html">1</a>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="2">
+                <a href="step2.html" class="step rounded-circle d-flex justify-content-center align-items-center visited">2</a>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="3">
+                <a href="step3.html" class="step rounded-circle d-flex justify-content-center align-items-center visited">3</a>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="4">
+                <a href="step4.html" class="step rounded-circle d-flex justify-content-center align-items-center visited">4</a>
+            </div>
+            <div class="step-container d-flex justify-content-between align-items-center " data-step="5"><div class="step rounded-circle d-flex justify-content-center align-items-center active" >5</div>
+            </div>
+        </div>
+    </div>
+    <!--Page form -->
+    <div class="container" id="cont-eventreg">
+        <form id="eventreg" name="eventform" method="POST" action="formsend">
+            <input type="hidden" name="eventreg" value="">
+            <input type="hidden" name="eventnm" value=""/>
+            <div class="row step-tab active" data-step="5">
+                <div class="col-10 offset-1">
+                    <div class="owl-carousel owl-theme enable-owl-carousel" id="thanks-slider"
+                         data-min320="1"
+                         data-min480="1"
+                         data-min768="1"
+                         data-min992="2"
+                         data-min1200="3"
+                         data-margin="15"
+                         data-rewind="false"
+                         data-pagination="true"
+                         data-auto-loop="false">
+                        <div class="thanks-text-slide">
+                            <p class="thanks-text" data-edit='thanks-text-1'>
+                                Доктор Юрий Трунов, Вы лучший из лучших врачей
+                                <span class="marked-thanks-text"
+                                      data-toggle="popover"
+                                      data-trigger="focus"
+                                      data-content="And here's some amazing content. It's very engaging. Right?"
+                                      data-placement="bottom">на свете</span>! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто <span class="marked-thanks-text" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. Right?" data-placement="bottom">превосходный</span>.
+                            </p>
+                            <div class="thanks-text-edit" data-edit='thanks-text-1'  data-toggle="modal" data-target="#editingModal">
+                                <div class="thanks-edit-container d-flex">
+                                    <div class="thanks-edit-icon rounded-circle d-flex justify-content-center align-items-center">
+                                        <svg
+                                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                width="10px" height="16px">
+                                            <image  x="0px" y="0px" width="10px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAMAAAAYoR5yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX///9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE////+XSx4VAAAAP3RSTlMAGHxWAgHDUYHHHlsTTIQEy3TXf4xZYXoLidsGzQyPT2xvHL8Jl0Z2ZyO6DsigPHnRPSm1sjOfuzKrsLbFcx8QI60xAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MMCg4pMJ5ITKQAAAB/SURBVAjXLc3XEoJAEETRa1gVEyhmVFQwYkbM+v+fJbPrPJ3q6uoBuUw2l9dAFYolq6xZsarU6iLbaTTdVlvY6dLrD6TsDUcw9iWcTGEWqFShE8J8IeFyBeuNKNp6sNsLD8cT51jPX5JrfLtrBmn7Yf4HtvuMDF/vjzIi+f7BD6CICSoqR0O6AAAAAElFTkSuQmCC" />
+                                        </svg>
+                                    </div>
+                                    <span class="d-flex align-items-center" >Редактировать</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="thanks-text-slide">
+                            <p class="thanks-text" data-edit='thanks-text-2'>
+                                Доктор Юрий Трунов, Вы лучший из лучших врачей <span class="marked-thanks-text" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">на свете</span>! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто <span class="marked-thanks-text" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">превосходный</span>.
+                            </p>
+                            <div class="thanks-text-edit"  data-toggle="modal" data-target="#editingModal" data-edit='thanks-text-2'>
+                                <div class="thanks-edit-container d-flex">
+                                    <div class="thanks-edit-icon rounded-circle d-flex justify-content-center align-items-center">
+                                        <svg
+                                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                width="10px" height="16px">
+                                            <image  x="0px" y="0px" width="10px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAMAAAAYoR5yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX///9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE////+XSx4VAAAAP3RSTlMAGHxWAgHDUYHHHlsTTIQEy3TXf4xZYXoLidsGzQyPT2xvHL8Jl0Z2ZyO6DsigPHnRPSm1sjOfuzKrsLbFcx8QI60xAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MMCg4pMJ5ITKQAAAB/SURBVAjXLc3XEoJAEETRa1gVEyhmVFQwYkbM+v+fJbPrPJ3q6uoBuUw2l9dAFYolq6xZsarU6iLbaTTdVlvY6dLrD6TsDUcw9iWcTGEWqFShE8J8IeFyBeuNKNp6sNsLD8cT51jPX5JrfLtrBmn7Yf4HtvuMDF/vjzIi+f7BD6CICSoqR0O6AAAAAElFTkSuQmCC" />
+                                        </svg>
+                                    </div>
+                                    <span class="d-flex align-items-center">Редактировать</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="thanks-text-slide">
+                            <p class="thanks-text" data-edit='thanks-text-3'>
+                                Доктор Юрий Трунов, Вы лучший из лучших врачей <span class="marked-thanks-text" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">на свете</span>! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто <span class="marked-thanks-text" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">превосходный</span>.
+                            </p>
+                            <div class="thanks-text-edit" data-edit='thanks-text-3'  data-toggle="modal" data-target="#editingModal">
+                                <div class="thanks-edit-container d-flex">
+                                    <div class="thanks-edit-icon rounded-circle d-flex justify-content-center align-items-center">
+                                        <svg
+                                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                width="10px" height="16px">
+                                            <image  x="0px" y="0px" width="10px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAMAAAAYoR5yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX///9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE////+XSx4VAAAAP3RSTlMAGHxWAgHDUYHHHlsTTIQEy3TXf4xZYXoLidsGzQyPT2xvHL8Jl0Z2ZyO6DsigPHnRPSm1sjOfuzKrsLbFcx8QI60xAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MMCg4pMJ5ITKQAAAB/SURBVAjXLc3XEoJAEETRa1gVEyhmVFQwYkbM+v+fJbPrPJ3q6uoBuUw2l9dAFYolq6xZsarU6iLbaTTdVlvY6dLrD6TsDUcw9iWcTGEWqFShE8J8IeFyBeuNKNp6sNsLD8cT51jPX5JrfLtrBmn7Yf4HtvuMDF/vjzIi+f7BD6CICSoqR0O6AAAAAElFTkSuQmCC" />
+                                        </svg>
+                                    </div>
+                                    <span class="d-flex align-items-center">Редактировать</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="thanks-text-slide">
+                            <p class="thanks-text" data-edit='thanks-text-4'>
+                                Доктор Юрий Трунов, Вы лучший из лучших врачей <span class="marked-thanks-text" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">на свете</span>! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто <span class="marked-thanks-text" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">превосходный</span>.
+                            </p>
+                            <div class="thanks-text-edit" data-edit='thanks-text-4'  data-toggle="modal" data-target="#editingModal">
+                                <div class="thanks-edit-container d-flex">
+                                    <div class="thanks-edit-icon rounded-circle d-flex justify-content-center align-items-center">
+                                        <svg
+                                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                width="10px" height="16px">
+                                            <image  x="0px" y="0px" width="10px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAMAAAAYoR5yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX///9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE////+XSx4VAAAAP3RSTlMAGHxWAgHDUYHHHlsTTIQEy3TXf4xZYXoLidsGzQyPT2xvHL8Jl0Z2ZyO6DsigPHnRPSm1sjOfuzKrsLbFcx8QI60xAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MMCg4pMJ5ITKQAAAB/SURBVAjXLc3XEoJAEETRa1gVEyhmVFQwYkbM+v+fJbPrPJ3q6uoBuUw2l9dAFYolq6xZsarU6iLbaTTdVlvY6dLrD6TsDUcw9iWcTGEWqFShE8J8IeFyBeuNKNp6sNsLD8cT51jPX5JrfLtrBmn7Yf4HtvuMDF/vjzIi+f7BD6CICSoqR0O6AAAAAElFTkSuQmCC" />
+                                        </svg>
+                                    </div>
+                                    <span class="d-flex align-items-center">Редактировать</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="thanks-text-slide">
+                            <p class="thanks-text" data-edit='thanks-text-5'>
+                                Доктор Юрий Трунов, Вы лучший из лучших врачей <span class="marked-thanks-text" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">на свете</span>! Вы искренне интересуетесь пациентом, поэтому общение с вами выше всяких похвал. А результат лечения просто <span class="marked-thanks-text" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">превосходный</span>.
+                            </p>
+                            <div class="thanks-text-edit" data-edit='thanks-text-5'  data-toggle="modal" data-target="#editingModal">
+                                <div class="thanks-edit-container d-flex">
+                                    <div class="thanks-edit-icon rounded-circle d-flex justify-content-center align-items-center">
+                                        <svg
+                                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                width="10px" height="16px">
+                                            <image  x="0px" y="0px" width="10px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAMAAAAYoR5yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX///9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE////+XSx4VAAAAP3RSTlMAGHxWAgHDUYHHHlsTTIQEy3TXf4xZYXoLidsGzQyPT2xvHL8Jl0Z2ZyO6DsigPHnRPSm1sjOfuzKrsLbFcx8QI60xAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MMCg4pMJ5ITKQAAAB/SURBVAjXLc3XEoJAEETRa1gVEyhmVFQwYkbM+v+fJbPrPJ3q6uoBuUw2l9dAFYolq6xZsarU6iLbaTTdVlvY6dLrD6TsDUcw9iWcTGEWqFShE8J8IeFyBeuNKNp6sNsLD8cT51jPX5JrfLtrBmn7Yf4HtvuMDF/vjzIi+f7BD6CICSoqR0O6AAAAAElFTkSuQmCC" />
+                                        </svg>
+                                    </div>
+                                    <span class="d-flex align-items-center">Редактировать</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="thanks-text-slide">
+                            <p class="thanks-text" data-edit='thanks-text-user'>
+                                Ваш вариант.
+                            </p>
+                            <div class="thanks-text-edit" data-edit='thanks-text-user'  data-toggle="modal" data-target="#editingModal">
+                                <div class="thanks-edit-container d-flex">
+                                    <div class="thanks-edit-icon rounded-circle d-flex justify-content-center align-items-center">
+                                        <svg
+                                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                width="10px" height="16px">
+                                            <image  x="0px" y="0px" width="10px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAMAAAAYoR5yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwFBMVEX///9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE9QUE////+XSx4VAAAAP3RSTlMAGHxWAgHDUYHHHlsTTIQEy3TXf4xZYXoLidsGzQyPT2xvHL8Jl0Z2ZyO6DsigPHnRPSm1sjOfuzKrsLbFcx8QI60xAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MMCg4pMJ5ITKQAAAB/SURBVAjXLc3XEoJAEETRa1gVEyhmVFQwYkbM+v+fJbPrPJ3q6uoBuUw2l9dAFYolq6xZsarU6iLbaTTdVlvY6dLrD6TsDUcw9iWcTGEWqFShE8J8IeFyBeuNKNp6sNsLD8cT51jPX5JrfLtrBmn7Yf4HtvuMDF/vjzIi+f7BD6CICSoqR0O6AAAAAElFTkSuQmCC" />
+                                        </svg>
+                                    </div>
+                                    <span class="d-flex align-items-center">Редактировать</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row pt-2 bottom-btn-container">
+                <div class="col-8 offset-2 d-flex justify-content-center align-items-center">
+                    <a href="preview.html" class="continue bottom-btn py-3 px-4 d-flex align-items-center justify-content-center active">Продолжить</a>
+                </div>
+            </div>
+            <div class="text-editing-modal modal fade" id="editingModal" tabindex="-1" role="dialog" aria-labelledby="editing-modal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title d-flex" id="editing-modal"></div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <textarea name="thanks-text-input" id="thanks-text-input" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-close-modal" data-dismiss="modal">Закрыть</button>
+                            <button type="button" class="bottom-btn active py-2 px-3 d-flex align-items-center justify-content-center w-auto" id="save-thanks-text" data-dismiss="modal">Сохранить и продолжить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<!--- Owl Carusel -->
+<link rel="stylesheet" href="css/plugins/owl/owl.carousel.css">
+<link rel="stylesheet" href="css/plugins/owl/owl.theme.default.css">
+<script src="js/plugins/owl.carousel.min.js" defer></script>
+
+
+<!-- photoswipe -->
+<link rel="stylesheet" href="css/plugins/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="css/plugins/photoswipe/default-skin.css">
+<script src="js/plugins/photoswipe.min.js" defer></script>
+<script src="js/plugins/photoswipe-ui-default.min.js" defer></script>
+
+<!-- isotope sortable -->
+<script src="js/plugins/isotope.pkgd.3-0-6.min.js" defer></script>
+<script src="js/plugins/imagesloaded.pkgd.min.js" defer></script>
+<script src="js/isodoc-191126.js" defer></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

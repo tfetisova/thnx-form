@@ -25,75 +25,66 @@ $(document).ready(function(){
   });
  $("#thanks-slider > div.owl-nav > button.owl-next").html(' <div class="thanks-slide-arrow arrow-next"></div>')
   $("#thanks-slider > div.owl-nav > button.owl-prev").html(' <div class="thanks-slide-arrow arrow-prev"></div>')
-  const steps = 5;
-
-  const createSteps = (stepsCount) => {
-    let allSteps = [];
-    for(let i=1; i<=stepsCount; i++){
-      if(i===stepsCount){
-        allSteps.push(`<div class="step-container d-flex justify-content-between align-items-center " data-step="${i}"><div class="step rounded-circle d-flex justify-content-center align-items-center" >${i}</div></div>`);
-      } else{
-        allSteps.push(`<div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="${i}"><div class="step rounded-circle d-flex justify-content-center align-items-center">${i}</div></div>`);
-      }
-    }
-    $('.steps').html(allSteps.join(''))
-  };
-
-  createSteps(steps);
-  const visibleStep = $(".step-tab:visible").data('step');
-  $(`.step-container[data-step=${visibleStep}]`).addClass('active');
-  const preview = () => {
-    $('.step-title').text('Ваша благодарность!').css({
-      'color':'var(--text-color)',
-    });
-    $('.step-subtitle').text('Смотрите, что получилось.').show().css({
-      'color':'var(--text-color)',
-    });
-    $('.steps').removeClass('d-flex').addClass('d-none');
-    $('.step-title-container').addClass('preview');
-    $('.continue').addClass('d-none');
-    $('.btn-form-submit').removeClass('d-none')
-  };
-  const stepContinue = () => {
-    $('.step-subtitle').hide();
-    const visibleStep = $('.step-tab:visible').data('step');
-    if($('.step-tab:visible').next()){
-      $('.step-tab:visible').next().addClass('active');
-      $(`.step-tab[data-step=${visibleStep}]`).removeClass('active');
-      $('.step-container.active').next().addClass('active')
-      $(`.step-container[data-step=${visibleStep}]`).removeClass('active');
-      switch (visibleStep) {
-        case 1 :
-          $('.step-title').text('Благодарность кому');
-          break;
-        case 2 :
-          $('.step-title').text('Благодарность от кого');
-          break;
-        case 3 :
-          $('.step-title').text('Добавьте Ваше портретное фото');
-          break;
-        case 4 :
-          $('.step-title').text('Текст благодарности');
-          $('.step-subtitle').text('Выберите из предложенных вариантов и отредактируйте по своему желанию').show();
-          break;
-        case 5 :
-          //preview case
-         preview();
-          break;
-        default:
-          $('.step-title').text('Начнём благодарность?');
-      }
-    }
-    $('body,html').animate({scrollTop: 0}, 400);
+  if($('.add-doctor-container').not('active')){
+    $('.continue[href="step3.html"]').css({
+      "margin-top": "370px"
+    })
   }
-  const goToPreview = () => {
-    $('.step-preview').addClass('active')
-      .siblings('.step-tab').removeClass('active');
-    preview();
-  };
-  $('.continue').on('click', ()=>{
-  stepContinue();
-  });
+  // const steps = 5;
+  // const visibleStep = $(".step-tab:visible").data('step');
+  // $(`.step-container[data-step=${visibleStep}]`).addClass('active');
+  // const preview = () => {
+  //   $('.step-title').text('Ваша благодарность!').css({
+  //     'color':'var(--text-color)',
+  //   });
+  //   $('.step-subtitle').text('Смотрите, что получилось.').show().css({
+  //     'color':'var(--text-color)',
+  //   });
+  //   $('.steps').removeClass('d-flex').addClass('d-none');
+  //   $('.step-title-container').addClass('preview');
+  //   $('.continue').addClass('d-none');
+  //   $('.btn-form-submit').removeClass('d-none')
+  // };
+  // const stepContinue = () => {
+  //   $('.step-subtitle').hide();
+  //   const visibleStep = $('.step-tab:visible').data('step');
+  //   if($('.step-tab:visible').next()){
+  //     $('.step-tab:visible').next().addClass('active');
+  //     $(`.step-tab[data-step=${visibleStep}]`).removeClass('active');
+  //     $('.step-container.active').next().addClass('active')
+  //     $(`.step-container[data-step=${visibleStep}]`).removeClass('active');
+  //     switch (visibleStep) {
+  //       case 1 :
+  //         $('.step-title').text('Благодарность кому');
+  //         break;
+  //       case 2 :
+  //         $('.step-title').text('Благодарность от кого');
+  //         break;
+  //       case 3 :
+  //         $('.step-title').text('Добавьте Ваше портретное фото');
+  //         break;
+  //       case 4 :
+  //         $('.step-title').text('Текст благодарности');
+  //         $('.step-subtitle').text('Выберите из предложенных вариантов и отредактируйте по своему желанию').show();
+  //         break;
+  //       case 5 :
+  //         //preview case
+  //        preview();
+  //         break;
+  //       default:
+  //         $('.step-title').text('Начнём благодарность?');
+  //     }
+  //   }
+  //   $('body,html').animate({scrollTop: 0}, 400);
+  // }
+  // const goToPreview = () => {
+  //   $('.step-preview').addClass('active')
+  //     .siblings('.step-tab').removeClass('active');
+  //   preview();
+  // };
+  // $('.continue').on('click', ()=>{
+  // stepContinue();
+  // });
   //живой поиск, логика перенесена из html
   isolimit = 9, isoColWd = 148;
   isoColWds = {
@@ -220,6 +211,9 @@ $(document).ready(function(){
     $('#iso3-content').on('click','.grid-item',select_value);
     $('.media-item').on('click', ()=>{
       $('.add-doctor-container').addClass('active');
+      $('.continue').css({
+        "margin-top": "170px"
+      })
     })
 
     $('.input-field').children('input').each(function(i) {
@@ -312,10 +306,7 @@ $(document).ready(function(){
 
   //сохранение текста благодарности
   $('#save-thanks-text').on('click', function(){
-    goToPreview();
     $('.preview-thanks-text').text($('#thanks-text-input').val());
   })
-
-
 });
 

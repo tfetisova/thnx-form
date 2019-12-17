@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Site description" >
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <title>Step 2</title>
+
+    <!-- Critical CSS -->
+    <style type="text/css">
+        @import "css/critical/bootstrap-reboot.css";
+        @import "css/critical/bootstrap-grid.css";
+        @import "css/critical/bootstrap.css";
+        @import "css/critical/basic.css";
+        @import "css/critical/forms.css";
+        @import "css/critical/fr-theme.css";
+        @import "css/critical/media.css";
+
+    </style>
+    <!-- /Critical CSS -->
+
+</head>
+
+<body>
+<div class="main-container" id="page">
+    <div class="container d-flex flex-column justify-content-start step-title-container">
+        <h2 class="text-center step-title mb-5">Благодарность кому</h2>
+        <div class="steps d-flex justify-content-center">
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center"
+                    data-step="1">
+                <a class="step rounded-circle d-flex justify-content-center align-items-center visited" href="index.html">1</a>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="2"><div class="step rounded-circle d-flex justify-content-center align-items-center active">2</div>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="3"><div class="step rounded-circle d-flex justify-content-center align-items-center">3</div>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="4"><div class="step rounded-circle d-flex justify-content-center align-items-center">4</div>
+            </div>
+            <div class="step-container d-flex justify-content-between align-items-center " data-step="5"><div class="step rounded-circle d-flex justify-content-center align-items-center" >5</div>
+            </div>
+        </div>
+    </div>
+    <!--Page form -->
+    <div class="container" id="cont-eventreg">
+        <form id="eventreg" name="eventform" method="POST" action="formsend">
+            <input type="hidden" name="eventreg" value="">
+            <input type="hidden" name="eventnm" value=""/>
+            <div class="row step-tab active mt-4" data-step="2">
+                <div class="col-md-8 offset-md-2">
+                    <div class="input-field col-sm-12 doctor-name-field">
+                        <input id="doctor-name" type="text" name="doctor-name" required>
+                        <label for="doctor-name" class="label">Имя врача</label>
+                        <!--							LIVE SEARCH	-->
+                        <div id="search_doc_dropdown" class="dropdown-search d-none add-doctor py-3 px-4">
+                            <span></span>
+                            <a href="#" class="stretched-link add-doctor-link"> - добавить доктора</a>
+                        </div>
+                    </div>
+                    <!--карточка результатов поиска-->
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+
+                            <div class="d-none" id="iso3-filters">
+                                <div class="filter-item active" data-f=".none" data-i="iso3"></div>
+                            </div>
+
+                            <div class="grid d-none" id="iso3-grid" data-tmpl="iso3-item-template">
+                                <div class="grid-content" id="iso3-content">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="search-box position-relative">
+                                <div id="iso3-item-template" class="media-item grid-item d-none">
+                                    <img src="" class="mr-3  grittm-img img-fluid" alt="doctor photo">
+                                    <div class="media-item-body">
+                                        <h5 class="grittm-docnbr mb-0"></h5>
+                                        <p class="mb-0 doctor-spec"></p>
+                                        <p class="grittm-dcity mb-0">Киев</p>
+                                        <span class="grittm-casnm d-none"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!--						блок добавления врача-->
+                    <div class="add-doctor-container">
+                        <div class="input-field col-sm-12 d-flex align-items-center justify-content-center  position-relative gender-container">
+                            <p class="gender position-absolute mb-0">Пол</p>
+                            <ul class="d-flex align-items-center mb-0">
+                                <li class="gender-m position-relative mr-5">
+                                    <label for="doctor-gender-m" class="radio mb-0 mr-2">
+                                        <input id="doctor-gender-m" type="radio" name="doctor-gender" class="mr-5 radio-input gender-m-input">
+                                        <span>М</span>
+                                    </label>
+
+
+                                </li>
+                                <li class="position-relative">
+                                    <label for="doctor-gender-f" class="radio mb-0">
+                                        <input id="doctor-gender-f" type="radio" name="doctor-gender" class="mr-2" >
+                                        <span>Ж</span></label>
+
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+                        <div class="input-field col-sm-12">
+                            <input id="city" type="text" name="city" required>
+                            <label for="city" class="label">Город</label>
+                        </div>
+                        <div class="input-field col-sm-12">
+                            <input id="specialty" type="text" name="specialty" required>
+                            <label for="specialty" class="label">Специальность</label>
+                        </div>
+                        <div class="input-field col-sm-12">
+                            <input id="clinic" type="text" name="clinic" required>
+                            <label for="clinic" class="label">Клиника</label>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="row pt-2 bottom-btn-container">
+                <div class="col-8 offset-2 d-flex justify-content-center align-items-center">
+                    <a href="step3.html" class="continue bottom-btn py-3 px-4 d-flex align-items-center justify-content-center active">Продолжить</a>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<!--- Owl Carusel -->
+<link rel="stylesheet" href="css/plugins/owl/owl.carousel.css">
+<link rel="stylesheet" href="css/plugins/owl/owl.theme.default.css">
+<script src="js/plugins/owl.carousel.min.js" defer></script>
+
+
+<!-- photoswipe -->
+<link rel="stylesheet" href="css/plugins/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="css/plugins/photoswipe/default-skin.css">
+<script src="js/plugins/photoswipe.min.js" defer></script>
+<script src="js/plugins/photoswipe-ui-default.min.js" defer></script>
+
+<!-- isotope sortable -->
+<script src="js/plugins/isotope.pkgd.3-0-6.min.js" defer></script>
+<script src="js/plugins/imagesloaded.pkgd.min.js" defer></script>
+<script src="js/isodoc-191126.js" defer></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

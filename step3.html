@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Site description" >
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <title>Step 3</title>
+
+    <!-- Critical CSS -->
+    <style type="text/css">
+        @import "css/critical/bootstrap-reboot.css";
+        @import "css/critical/bootstrap-grid.css";
+        @import "css/critical/bootstrap.css";
+        @import "css/critical/basic.css";
+        @import "css/critical/forms.css";
+        @import "css/critical/fr-theme.css";
+        @import "css/critical/media.css";
+
+    </style>
+    <!-- /Critical CSS -->
+
+</head>
+
+<body>
+<div class="main-container" id="page">
+    <div class="container d-flex flex-column justify-content-start step-title-container">
+        <h2 class="text-center step-title mb-5">Благодарность от кого</h2>
+        <div class="steps d-flex justify-content-center">
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center"
+                    data-step="1">
+                <a class="step rounded-circle d-flex justify-content-center align-items-center visited" href="index.html">1</a>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="2">
+                <a href="step2.html" class="step rounded-circle d-flex justify-content-center align-items-center visited">2</a>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="3">
+                <div class="step rounded-circle d-flex justify-content-center align-items-center active">3</div>
+            </div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="4"><div class="step rounded-circle d-flex justify-content-center align-items-center">4</div>
+            </div>
+            <div class="step-container d-flex justify-content-between align-items-center " data-step="5"><div class="step rounded-circle d-flex justify-content-center align-items-center" >5</div>
+            </div>
+        </div>
+    </div>
+    <!--Page form -->
+    <div class="container" id="cont-eventreg">
+        <form id="eventreg" name="eventform" method="POST" action="formsend">
+            <input type="hidden" name="eventreg" value="">
+            <input type="hidden" name="eventnm" value=""/>
+            <div class="row step-tab active mt-4" data-step="3">
+                <div class="col-md-8 offset-md-2">
+                    <div class="input-field col-sm-12">
+                        <input id="user-name" type="text" name="user-name" required>
+                        <label for="user-name" class="label">Имя</label>
+                    </div>
+                    <div class="input-field col-sm-12">
+                        <input id="user-last-name" type="text" name="user-last-name" required>
+                        <label for="user-last-name" class="label">Фамилия</label>
+                    </div>
+                    <div class="input-field col-sm-12 d-flex align-items-center justify-content-center  position-relative gender-container">
+                        <p class="gender position-absolute mb-0">Пол</p>
+                        <ul class="d-flex align-items-center mb-0">
+                            <li class="gender-m position-relative mr-5">
+                                <label for="user-gender-m" class="radio mb-0 mr-2">
+                                    <input id="user-gender-m" type="radio" name="user-gender" class="mr-5 radio-input gender-m-input">
+                                    <span>М</span>
+                                </label>
+
+
+                            </li>
+                            <li class="position-relative">
+                                <label for="user-gender-f" class="radio mb-0">
+                                    <input id="user-gender-f" type="radio" name="user-gender" class="mr-2" >
+                                    <span>Ж</span></label>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <p class="text-uppercase about-user"></p>
+                    <div class="input-field col-sm-12">
+                        <input id="country" type="text" name="country" required>
+                        <label for="country" class="label">Страна</label>
+                    </div>
+                    <div class="input-field col-sm-12">
+                        <input id="user-city" type="text" name="user-city" required>
+                        <label for="user-city" class="label">Город</label>
+                    </div>
+                    <div class="input-field col-sm-12">
+                        <input id="year" type="text" name="year" required>
+                        <label for="year" class="label">Год обращения к врачу</label>
+                    </div>
+                    <div class="input-field col-sm-12">
+                        <input id="user-problem" type="text" name="user-problem" required>
+                        <label for="user-problem" class="label">Проблема, которую Вы решали</label>
+                    </div>
+                    <div class="input-field col-sm-12">
+                        <input id="user-problem-solving" type="text" name="user-problem-solving" required>
+                        <label for="user-problem-solving" class="label">Диагноз и лечение</label>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="row pt-2 bottom-btn-container">
+                <div class="col-8 offset-2 d-flex justify-content-center align-items-center">
+                    <a href="step4.html" class="continue bottom-btn py-3 px-4 d-flex align-items-center justify-content-center active">Продолжить</a>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<!--- Owl Carusel -->
+<link rel="stylesheet" href="css/plugins/owl/owl.carousel.css">
+<link rel="stylesheet" href="css/plugins/owl/owl.theme.default.css">
+<script src="js/plugins/owl.carousel.min.js" defer></script>
+
+
+<!-- photoswipe -->
+<link rel="stylesheet" href="css/plugins/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="css/plugins/photoswipe/default-skin.css">
+<script src="js/plugins/photoswipe.min.js" defer></script>
+<script src="js/plugins/photoswipe-ui-default.min.js" defer></script>
+
+<!-- isotope sortable -->
+<script src="js/plugins/isotope.pkgd.3-0-6.min.js" defer></script>
+<script src="js/plugins/imagesloaded.pkgd.min.js" defer></script>
+<script src="js/isodoc-191126.js" defer></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

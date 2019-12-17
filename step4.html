@@ -10,7 +10,7 @@
     <meta property="og:url" content="" />
     <meta property="og:description" content="" />
 
-    <title>Step 1</title>
+    <title>Step 4</title>
 
     <!-- Critical CSS -->
     <style type="text/css">
@@ -30,18 +30,19 @@
 <body>
 <div class="main-container" id="page">
     <div class="container d-flex flex-column justify-content-start step-title-container">
-        <h2 class="text-center step-title mb-0">Начнём благодарить?</h2>
-        <p class="text-center mx-auto step-subtitle mb-2">5 простых шагов, которые сделают Вас счастливее</p>
+        <h2 class="text-center step-title mb-4">Добавьте Ваше портретное фото</h2>
         <div class="steps d-flex justify-content-center">
             <div class="step-container line-after-step d-flex justify-content-between align-items-center"
                     data-step="1">
-                <div class="step rounded-circle d-flex justify-content-center align-items-center active">1</div>
+                <a class="step rounded-circle d-flex justify-content-center align-items-center visited" href="index.html">1</a>
             </div>
-            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="2"><div class="step rounded-circle d-flex justify-content-center align-items-center">2</div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="2">
+                <a href="step2.html" class="step rounded-circle d-flex justify-content-center align-items-center visited">2</a>
             </div>
-            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="3"><div class="step rounded-circle d-flex justify-content-center align-items-center">3</div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="3">
+                <a href="step3.html" class="step rounded-circle d-flex justify-content-center align-items-center visited">3</a>
             </div>
-            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="4"><div class="step rounded-circle d-flex justify-content-center align-items-center">4</div>
+            <div class="step-container line-after-step d-flex justify-content-between align-items-center " data-step="4"><div class="step rounded-circle d-flex justify-content-center align-items-center active">4</div>
             </div>
             <div class="step-container d-flex justify-content-between align-items-center " data-step="5"><div class="step rounded-circle d-flex justify-content-center align-items-center" >5</div>
             </div>
@@ -52,35 +53,27 @@
         <form id="eventreg" name="eventform" method="POST" action="formsend">
             <input type="hidden" name="eventreg" value="">
             <input type="hidden" name="eventnm" value=""/>
-            <div class="row step-tab active" data-step="1">
-                <div class="col-md-8 offset-md-2">
+            <div class="row step-tab active" data-step="4">
+                <div class="col-8 offset-2">
                     <div class="input-field col-sm-12">
-                        <input id="user-email" type="email" name="user-email" required>
-                        <label for="user-email" class="label">Ваш e-mail</label>
-                    </div>
-                    <div class="input-field col-sm-12">
-                        <input id="user-tel" type="tel" name="user-tel" required pattern="[+]{1}[0-9]{12}">
-                        <label for="user-tel" class="label">Ваш телефон</label>
-                    </div>
-
-                    <div class="mx-3 text-center or-container">
-                        <p class="form-or my-4 position-relative">или</p>
-                        <div class="row">
-                            <div class="col-8 offset-2 d-flex justify-content-center align-items-center">
-                                <div class="fb-login d-flex p-2 align-items-center">
-                                    <svg class="fb-icon" enable-background="new 0 0 550 550" version="1.1" viewBox="0 0 550 550" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><circle class="fb-icon-fill" cx="275" cy="275" r="256"/><path d="M236.1,190.8c0,7.4,0,40.4,0,40.4h-29.6v49.4h29.6V416h60.8V280.5h40.8     c0,0,3.8-23.7,5.7-49.6c-5.3,0-46.2,0-46.2,0s0-28.7,0-33.8c0-5,6.6-11.8,13.2-11.8c6.5,0,20.3,0,33.1,0c0-6.7,0-30,0-51.4     c-17.1,0-36.5,0-45,0C234.6,134,236.1,183.4,236.1,190.8z" fill="#FFFFFF" id="Facebook_4_"/></g></g></svg>
-                                    <p class="mb-0 pl-3">Вход с Facebook</p>
-                                </div>
-                            </div>
+                        <div class="user-photo-container">
+                            <input type="file" class="user-photo-input custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="user-photo d-flex flex-column align-items-center justify-content-center" for="inputGroupFile01">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="61px" height="77px">
+                                    <image  x="0px" y="0px" width="61px" height="77px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAABNCAMAAAAinpwaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAolBMVEX/////ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD///+BdD5GAAAANHRSTlMAIMvv5358h38QsQa/xYYiMD/bzySbTVqTG/n8AswV0pYBitP+eUFfI69tnzuX2HglF86BYqTo8wAAAAFiS0dEAIgFHUgAAAAHdElNRQfjCxkVFgbp05vxAAABK0lEQVRYw+3Xa2+CMBSA4c4Nr6hVnIp3N526q7r+/982KEWh6+3UaEjs+/1JAz3kBPRQejTuyUNcZQKpwukqSPM80pWaWQIe6SoyS3A6TNc5DtMNjsM04jhQcxyq8xyscxyus9xCZ7iNPnOY9lnNeOpaFpOaqX2RxhDdydUF6nyB09fQPd9/tteYkMBpp50umO4P/uvGMDTT/dF4wOtocXVDEz2ZEsL4SdOt5xmdPZunPNUUL5Zmz33iTAux/J2nPNFirLgxxqmWYNV9JzzWMqycFspfCHmVYfWsxXyVLHkh1kxqzBVYN+eMS7D2K6FchvXfWMSl2GADz9ZSXOztf1P9ttG1Veid9l9wczX9/qHrs6Dv3Ol70F/Ypm+mrcPo5wK9R4d6YNnxF/0By63JdFiLvP0AAAAASUVORK5CYII=" />
+                                </svg>
+                                Загрузить фото</label>
                         </div>
                     </div>
-
 
                 </div>
             </div>
             <div class="row pt-2 bottom-btn-container">
                 <div class="col-8 offset-2 d-flex justify-content-center align-items-center">
-                    <a href="step2.html" class="continue bottom-btn py-3 px-4 d-flex align-items-center justify-content-center active">Продолжить</a>
+                    <a href="step5.html" class="continue bottom-btn py-3 px-4 d-flex align-items-center justify-content-center active">Продолжить</a>
                 </div>
             </div>
 
