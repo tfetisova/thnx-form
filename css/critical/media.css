@@ -3,14 +3,10 @@
         background-image: url("../../img/main-bg-desktop.png");
         /*height: auto;*/
     }
-    .bottom-btn-container{
-        padding-bottom: 10vh;
-    }
-    #eventreg{
-        padding-bottom: 20vh;
-    }
-    /*.user-photo{*/
-    /*    padding-top: 100px;*/
-    /*    padding-bottom: 100px;*/
+    /*.bottom-btn-container{*/
+    /*    padding-bottom: 10vh;*/
+    /*}*/
+    /*#eventreg{*/
+    /*    padding-bottom: 20vh;*/
     /*}*/
 }

@@ -265,23 +265,24 @@ $(document).ready(function(){
   $('.user-photo-input').change(function() {
     if (this.files[0]) {
       let fr = new FileReader();
+
       fr.onload = function () {
+        const userPhoto = fr.result;
+        console.log(userPhoto);
         $('.user-photo ').css({
-          "background-image": `url("${fr.result}")`,
+          "background-image": `url("${userPhoto}")`,
           "background-size": "cover",
           "background-position": "top center",
           "background-repeat": "no-repeat",
           "height" : "262.33px",
           "color": "#fff",
         }).text('Загрузить другое фото');
-        $('.user-photo-preview').css('background-image', `url('${fr.result}')`);
       };
       fr.readAsDataURL(this.files[0]);
       $('.user-photo>svg').hide();
     }
 
   });
-
   //редактирование текста благодарности
   $('.thanks-text-edit').on('click', function(){
     const editId = $(this).data("edit");
