@@ -142,10 +142,6 @@ a.btn-form-submit:not([href]):not([tabindex]){
 .fb-icon-fill{
     fill: #006ab0;
 }
-
-.bottom-btn-container{
-    background: linear-gradient(to top, #fff, transparent);
-}
 /*step 2*/
 .dropdown-search {
     background-color: #fff;
@@ -369,8 +365,7 @@ a.btn-form-submit:not([href]):not([tabindex]){
 }
 /*step 4*/
 .user-photo{
-    padding-top: 75px;
-    padding-bottom: 70px;
+    min-height: 70vh;
     margin-bottom: 20px;
     font-size: .75rem;
     border: 1px solid #7b7b7b;
