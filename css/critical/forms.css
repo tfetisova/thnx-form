@@ -531,3 +531,17 @@ a.btn-form-submit:not([href]):not([tabindex]){
     background-color: var(--subtitle-color);
 
 }
+/*confirm & send page*/
+.main-container.confirm-page{
+    background: linear-gradient(to right, #ffe7d6, #fff6c8); ;
+    min-height: 100vh;
+    padding-bottom: 200px;
+}
+.confirm-page .bottom-btn{
+    width: auto;
+}
+.heart-container{
+    padding-bottom: 150px;
+    padding-top: 130px;
+
+}
