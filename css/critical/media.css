@@ -3,10 +3,28 @@
         background-image: url("../../img/main-bg-desktop.png");
         /*height: auto;*/
     }
-    /*.bottom-btn-container{*/
-    /*    padding-bottom: 10vh;*/
-    /*}*/
-    /*#eventreg{*/
-    /*    padding-bottom: 20vh;*/
-    /*}*/
+     .step-title-container.preview{
+        min-height: auto;
+         justify-content: flex-end;
+         align-items: flex-end;
+         padding-top: 40px;
+         padding-bottom: 40px;
+
+    }
+    .step-title-container.preview:before{
+        width: 60%;
+        left: initial;
+        right: 0;
+        top: 0;
+        height: 100%;
+    }
+     .step-subtitle{
+         width: auto;
+     }
+    .user-photo-preview {
+        width: 50%;
+    }
+    .thanks-all-preview {
+        margin-top: 30vh;
+    }
 }

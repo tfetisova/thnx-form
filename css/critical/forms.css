@@ -465,7 +465,7 @@ a.btn-form-submit:not([href]):not([tabindex]){
     right:0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .8);
     z-index: 10;
 }
 .user-photo-preview{

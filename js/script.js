@@ -287,7 +287,7 @@ $(document).ready(function(){
   $('.thanks-text-edit').on('click', function(){
     const editId = $(this).data("edit");
     console.log('editId',editId);
-    const editText = $(`.thanks-text[data-edit="${editId}"]`);
+    const editText = $(`.edited-text[data-edit="${editId}"]`);
     console.log('editText',editText);
     const thanksTextInput = $('#thanks-text-input');
     const modalTitle = $('#editing-modal');

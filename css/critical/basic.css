@@ -58,6 +58,9 @@
     color: var(--subtitle-color);
     z-index: 100;
 }
+.step-subtitle.grey{
+    color: #666666;
+}
 .step-title-container{
     min-height: 15vh;
 }
