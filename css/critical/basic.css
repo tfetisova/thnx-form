@@ -124,4 +124,16 @@
     color: var(--subtitle-color);
     border: 1px solid var(--subtitle-color);
 }
+.bottom-btn.post{
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.svg-text{
+    font-family: 'BodoniC', serif;
+    fill: var(--primary-color);
+    font-size: 3rem;
+    line-height: 0.884;
+    text-align: center;
+}
 
