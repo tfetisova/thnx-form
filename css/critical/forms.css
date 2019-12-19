@@ -374,6 +374,9 @@ a.btn-form-submit:not([href]):not([tabindex]){
 .user-photo>svg{
     margin-bottom: 21px;
 }
+.user-photo.dragover {
+    border: 2px dotted var(--primary-color)
+}
 /*step 5*/
 .thanks-text-slide{
     border-radius: 9px;

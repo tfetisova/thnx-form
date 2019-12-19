@@ -30,62 +30,6 @@ $(document).ready(function(){
       "margin-top": "370px"
     })
   }
-  // const steps = 5;
-  // const visibleStep = $(".step-tab:visible").data('step');
-  // $(`.step-container[data-step=${visibleStep}]`).addClass('active');
-  // const preview = () => {
-  //   $('.step-title').text('Ваша благодарность!').css({
-  //     'color':'var(--text-color)',
-  //   });
-  //   $('.step-subtitle').text('Смотрите, что получилось.').show().css({
-  //     'color':'var(--text-color)',
-  //   });
-  //   $('.steps').removeClass('d-flex').addClass('d-none');
-  //   $('.step-title-container').addClass('preview');
-  //   $('.continue').addClass('d-none');
-  //   $('.btn-form-submit').removeClass('d-none')
-  // };
-  // const stepContinue = () => {
-  //   $('.step-subtitle').hide();
-  //   const visibleStep = $('.step-tab:visible').data('step');
-  //   if($('.step-tab:visible').next()){
-  //     $('.step-tab:visible').next().addClass('active');
-  //     $(`.step-tab[data-step=${visibleStep}]`).removeClass('active');
-  //     $('.step-container.active').next().addClass('active')
-  //     $(`.step-container[data-step=${visibleStep}]`).removeClass('active');
-  //     switch (visibleStep) {
-  //       case 1 :
-  //         $('.step-title').text('Благодарность кому');
-  //         break;
-  //       case 2 :
-  //         $('.step-title').text('Благодарность от кого');
-  //         break;
-  //       case 3 :
-  //         $('.step-title').text('Добавьте Ваше портретное фото');
-  //         break;
-  //       case 4 :
-  //         $('.step-title').text('Текст благодарности');
-  //         $('.step-subtitle').text('Выберите из предложенных вариантов и отредактируйте по своему желанию').show();
-  //         break;
-  //       case 5 :
-  //         //preview case
-  //        preview();
-  //         break;
-  //       default:
-  //         $('.step-title').text('Начнём благодарность?');
-  //     }
-  //   }
-  //   $('body,html').animate({scrollTop: 0}, 400);
-  // }
-  // const goToPreview = () => {
-  //   $('.step-preview').addClass('active')
-  //     .siblings('.step-tab').removeClass('active');
-  //   preview();
-  // };
-  // $('.continue').on('click', ()=>{
-  // stepContinue();
-  // });
-  //живой поиск, логика перенесена из html
   isolimit = 9, isoColWd = 148;
   isoColWds = {
     'xs':300, // <576
@@ -262,24 +206,62 @@ $(document).ready(function(){
     $('.dropdown-search').addClass('d-none');
   });
   //user photo upload
+ const dropZone = $('.user-photo');
+  dropZone.on('drag dragstart dragend dragover dragenter dragleave drop', function(){
+    return false;
+  });
+  dropZone.on('dragover dragenter', function() {
+    dropZone.addClass('dragover');
+  });
+
+  dropZone.on('dragleave', function(e) {
+    dropZone.removeClass('dragover');
+  });
+  dropZone.on('dragleave', function(e) {
+    let dx = e.pageX - dropZone.offset().left;
+    let dy = e.pageY - dropZone.offset().top;
+    if ((dx < 0) || (dx > dropZone.width()) || (dy < 0) || (dy > dropZone.height())) {
+      dropZone.removeClass('dragover');
+    };
+  });
+  dropZone.on('drop', function(e) {
+    dropZone.removeClass('dragover');
+    readFile(e.originalEvent.dataTransfer.files[0])
+
+
+  });
+function readFile(file){
+  //preloader
+  $('.user-photo').html(`
+   <div class="loader">
+<div class="l_main">
+  <div class="l_square"><span></span><span></span><span></span></div>
+  <div class="l_square"><span></span><span></span><span></span></div>
+  <div class="l_square"><span></span><span></span><span></span></div>
+  <div class="l_square"><span></span><span></span><span></span></div>
+</div>
+</div>
+  `);
+  let fr = new FileReader();
+
+  fr.onload = function () {
+    $('.user-photo').html('');
+    const userPhoto = fr.result;
+    $('.user-photo ').css({
+      "background-image": `url("${userPhoto}")`,
+      "background-size": "cover",
+      "background-position": "top center",
+      "background-repeat": "no-repeat",
+      "height" : "262.33px",
+      "color": "#fff",
+    }).text('Загрузить другое фото');
+  };
+  fr.readAsDataURL(file);
+  $('.user-photo>svg').hide();
+}
   $('.user-photo-input').change(function() {
     if (this.files[0]) {
-      let fr = new FileReader();
-
-      fr.onload = function () {
-        const userPhoto = fr.result;
-        console.log(userPhoto);
-        $('.user-photo ').css({
-          "background-image": `url("${userPhoto}")`,
-          "background-size": "cover",
-          "background-position": "top center",
-          "background-repeat": "no-repeat",
-          "height" : "262.33px",
-          "color": "#fff",
-        }).text('Загрузить другое фото');
-      };
-      fr.readAsDataURL(this.files[0]);
-      $('.user-photo>svg').hide();
+      readFile(this.files[0])
     }
 
   });
