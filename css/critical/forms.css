@@ -382,6 +382,11 @@ a.btn-form-submit:not([href]):not([tabindex]){
     margin-top: 20px;
     height: 420px;
 }
+/*выбранный слайд*/
+.thanks-text-slide.selected{
+    border: 2px solid var(--primary-color);
+
+}
 .thanks-text {
     font-size: 1.25rem;
     line-height: 1.4;
@@ -419,11 +424,13 @@ a.marked-thanks-text:focus{
 .popover-body{
     padding: 0;
 }
-.popover>arrow:before,
-.popover>arrow:after,
+.popover>.arrow:before,
+.popover>.arrow:after,
 .bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after,
-.bs-popover-bottom .arrow::before{
+.bs-popover-bottom .arrow::before,
+.bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after{
     border-bottom-color:#d8e9ff;
+    border-top-color:#d8e9ff ;
 
 }
 .popover-list>li{
