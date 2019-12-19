@@ -7,8 +7,8 @@
 }
 
 ul:not(.browser-default) {
-    padding-left: 0;
     list-style-type: none;
+    padding: 0;
 }
 
 /*forms*/
@@ -395,6 +395,39 @@ a.btn-form-submit:not([href]):not([tabindex]){
     text-decoration-color: var(--primary-color);
     text-decoration-style: dotted;
     cursor: pointer;
+    display: inline-block;
+    position: relative;
+
+}
+a.marked-thanks-text:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+a.marked-thanks-text:focus{
+    outline: none;
+}
+.popover{
+    background-color: #d8e9ff;
+    border-radius: 5px;
+    color: var(--primary-color);
+    line-height: 1.25;
+    font-size: 1rem;
+    padding: 12px !important;
+    border: none;
+}
+.popover-body{
+    padding: 0;
+}
+.popover>arrow:before,
+.popover>arrow:after,
+.bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after,
+.bs-popover-bottom .arrow::before{
+    border-bottom-color:#d8e9ff;
+
+}
+.popover-list>li{
+    color: var(--primary-color)
 }
 #thanks-slider > div.owl-nav > button:focus{
     outline: none;

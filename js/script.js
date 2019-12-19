@@ -283,6 +283,7 @@ $(document).ready(function(){
     }
 
   });
+
   //редактирование текста благодарности
   $('.thanks-text-edit').on('click', function(){
     const editId = $(this).data("edit");
