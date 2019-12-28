@@ -72,7 +72,7 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label,
 input[type=email]:not(.browser-default):focus:not([readonly])+label,
 input[type=tel]:not(.browser-default):focus:not([readonly])+label
 {
-    color: #fe6125;
+    color: var(--primary-color);
 }
 .input-field>.label:not(.label-icon).active{
 	-webkit-transform: translateY(-14px) scale(0.8);
@@ -132,8 +132,6 @@ a.btn-form-submit:not([href]):not([tabindex]){
     font-size: .875rem;
     cursor: pointer;
     width: 180px;
-    margin-bottom: 200px;
-
 }
 .fb-icon{
     width: 27px;
@@ -171,6 +169,10 @@ a.btn-form-submit:not([href]):not([tabindex]){
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100px;
+}
+.input-field.doctor-name-field{
+    padding-left:0;
+    padding-right: 0;
 }
 .add-doctor-link{
     color: #007bff;
@@ -217,7 +219,9 @@ a.btn-form-submit:not([href]):not([tabindex]){
     -ms-flex-align: start;
     align-items: flex-start;
     overflow: hidden;
-    margin: 0 1% 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+
 
 }
 .media-item-body {
@@ -586,5 +590,6 @@ a.marked-thanks-text:focus{
 .heart-container{
     padding-bottom: 150px;
     padding-top: 130px;
+
 
 }
