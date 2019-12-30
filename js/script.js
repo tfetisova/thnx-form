@@ -23,11 +23,13 @@ $(document).ready(function(){
       }
     }
   });
- $("#thanks-slider > div.owl-nav > button.owl-next").html(' <div class="thanks-slide-arrow arrow-next"></div>')
-  $("#thanks-slider > div.owl-nav > button.owl-prev").html(' <div class="thanks-slide-arrow arrow-prev"></div>')
+ $("#thanks-slider > div.owl-nav > button.owl-next").html(' <div class="thanks-slide-arrow arrow-next"></div>');
+
+  $("#thanks-slider > div.owl-nav > button.owl-prev").html(' <div class="thanks-slide-arrow arrow-prev"></div>');
+
   if($('.add-doctor-container').not('active')){
     $('.continue[href="step3.html"]').css({
-      "margin-top": "370px"
+      "margin-top": "170px"
     })
   }
   isolimit = 9, isoColWd = 148;
@@ -156,7 +158,7 @@ $(document).ready(function(){
     $('.media-item').on('click', ()=>{
       $('.add-doctor-container').addClass('active');
       $('.continue').css({
-        "margin-top": "170px"
+        "margin-top": "50px"
       })
     })
 
