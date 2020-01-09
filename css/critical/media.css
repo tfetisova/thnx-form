@@ -1,10 +1,9 @@
-@media screen and (min-width: 430px){
-
-}
 @media screen and (min-width: 480px) {
     .main-container {
         background-image: url("../../img/main-bg-desktop.png");
-        /*height: auto;*/
+    }
+    .user-photo{
+        min-height: 60vh;
     }
      .step-title-container.preview{
          min-height: auto;
@@ -23,6 +22,9 @@
      .step-subtitle{
          width: auto;
      }
+    .pic-container .grid-item{
+        width: calc(33.3% - 7px);
+    }
 }
 @media screen and (min-width: 768px){
     .step-title-container.preview .step-subtitle{
@@ -30,6 +32,9 @@
     }
     .step-title-container.preview .step-title{
         font-size: 2.5rem;
+    }
+    .pic-container .grid-item{
+        width: calc(25% - 7px);
     }
 }
 
