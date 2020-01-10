@@ -114,7 +114,10 @@ $(document).ready(function(){
     if (t) {
       qsd.val(t);
       qsu = '.none';
-      $('#iso3-content').isotope();
+      $('#iso3-content').isotope({
+        itemSelector: '.media-item',
+        layoutMode: 'fitRows'
+      });
       $('#search_doc_dropdown').addClass('d-none');
     }
     return false;
