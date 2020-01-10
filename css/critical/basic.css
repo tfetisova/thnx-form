@@ -270,10 +270,8 @@
     z-index: 3;
     font-size: 10px;
     position: absolute;
-    right: -15%;
+    right: -22.5px;
     bottom: 25%;
-
-
 }
 .new-person .item-caption:after{
     content: '';
