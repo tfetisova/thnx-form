@@ -262,8 +262,21 @@
     background-color: #d8e9ee;
     margin-bottom: 15px;
 }
+.new-person .item-caption:before{
+    content: "NEW";
+    transform-origin: 0 100%;
+    transform: rotate(-90deg);
+    color: #fff;
+    z-index: 3;
+    font-size: 10px;
+    position: absolute;
+    right: -15%;
+    bottom: 25%;
+
+
+}
 .new-person .item-caption:after{
-    content: url(../../img/NEW.svg);
+    content: '';
     background-color: var(--primary-color);
     right: 0;
     bottom: 0;
@@ -273,4 +286,5 @@
     height: 100%;
     width: 17px;
     position: absolute;
+    z-index: 2;
 }
