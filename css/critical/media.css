@@ -1,7 +1,4 @@
 @media screen and (min-width: 480px) {
-    .main-container {
-        background-image: url("../../img/main-bg-desktop.png");
-    }
     .user-photo{
         min-height: 60vh;
     }
