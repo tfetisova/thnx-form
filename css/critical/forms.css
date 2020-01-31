@@ -474,18 +474,27 @@ a.marked-thanks-text:focus{
 
      /*step 6 - preview*/
 
-.step-title-container.preview:before{
+.step-title-container.preview:before {
     content: '';
     position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 10;
+    -webkit-animation-name: fadeOut;
+    -moz-animation-name: fadeOut;
+    -o-animation-name: fadeOut;
     animation-name: fadeOut;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-duration: 7s;
+    -moz-animation-duration: 7s;
+    -o-animation-duration: 7s;
     animation-duration: 7s;
 }
 @keyframes fadeOut {
