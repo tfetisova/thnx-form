@@ -508,7 +508,13 @@ a.marked-thanks-text:focus{
 }
 @keyframes fadeOutRight {
     0% {
+
+        position: fixed;
+        left: -100%;
+    }
+    10% {
         opacity: 1;
+        position: static;
     }
     90%{
         opacity: 0;
