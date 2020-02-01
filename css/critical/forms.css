@@ -522,15 +522,25 @@ a.marked-thanks-text:focus{
 }
 
 
-.preview>h2,
-.preview>p{
+.preview > h2,
+.preview > p {
+    -webkit-animation-name: fadeOutRight;
+    -moz-animation-name: fadeOutRight;
+    -o-animation-name: fadeOutRight;
     animation-name: fadeOutRight;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
     animation-delay: 3s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-
 }
-
 .user-photo-preview{
     position: absolute;
     top:0;
