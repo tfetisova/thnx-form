@@ -263,6 +263,13 @@ function readFile(file){
   };
   fr.readAsDataURL(file);
   $('.user-photo>svg').hide();
+  let startRotate = 0;
+  $('button.photo-rotate').on('click', ()=>{
+    $('.user-photo ').css({
+      'transform': `rotate(${startRotate+=90}deg)`
+    })
+  })
+
 }
   $('.user-photo-input').change(function() {
     if (this.files[0]) {

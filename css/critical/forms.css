@@ -497,6 +497,21 @@ a.marked-thanks-text:focus{
     -o-animation-duration: 7s;
     animation-duration: 7s;
 }
+.preview > h2,
+.preview > p {
+    -webkit-animation-name: fadeOut;
+    -moz-animation-name: fadeOut;
+    -o-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 7s;
+    -moz-animation-duration: 7s;
+    -o-animation-duration: 7s;
+    animation-duration: 7s;
+}
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -506,87 +521,8 @@ a.marked-thanks-text:focus{
         opacity: 0;
     }
 }
-@-webkit-keyframes fadeOutRight {
-    0% {
-        position: fixed;
-        left: -100%; }
-    10% {
-        opacity: 1;
-        position: static; }
-    90% {
-        opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0); }
-    100% {
-        position: fixed;
-        right: -100%; } }
 
-@-moz-keyframes fadeOutRight {
-    0% {
-        position: fixed;
-        left: -100%; }
-    10% {
-        opacity: 1;
-        position: static; }
-    90% {
-        opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        -moz-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0); }
-    100% {
-        position: fixed;
-        right: -100%; } }
 
-@-o-keyframes fadeOutRight {
-    0% {
-        position: fixed;
-        left: -100%; }
-    10% {
-        opacity: 1;
-        position: static; }
-    90% {
-        opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0); }
-    100% {
-        position: fixed;
-        right: -100%; } }
-
-@keyframes fadeOutRight {
-    0% {
-        position: fixed;
-        left: -100%; }
-    10% {
-        opacity: 1;
-        position: static; }
-    90% {
-        opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        -moz-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0); }
-    100% {
-        position: fixed;
-        right: -100%; } }
-
-.preview > h2,
-.preview > p {
-    -webkit-animation-name: fadeOutRight;
-    -moz-animation-name: fadeOutRight;
-    -o-animation-name: fadeOutRight;
-    animation-name: fadeOutRight;
-    -webkit-animation-delay: 3s;
-    -moz-animation-delay: 3s;
-    -o-animation-delay: 3s;
-    animation-delay: 3s;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
 .user-photo-preview{
     position: absolute;
     top:0;
@@ -612,6 +548,17 @@ a.marked-thanks-text:focus{
     font-size: 1.875rem;
     color: var(--primary-color);
     text-transform: uppercase;
+}
+.disabled.photo-rotate.bottom-btn{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    min-width: 140px;
+    cursor: pointer;
+}
+.disabled.photo-rotate.bottom-btn:hover,
+.disabled.photo-rotate.bottom-btn:active{
+    background: var(--primary-bg);
+    color: #fff;
 }
 
 /*text editing modal*/
